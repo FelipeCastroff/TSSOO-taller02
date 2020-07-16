@@ -50,6 +50,8 @@ Es importante recalcar que en un inicio el tiempo de suma de la etapa paralela e
 ## Conclusiones.
 En cuanto lo abordado anteriormente, es destacable que el uso de hilos en la programación es, en su mayoría, eficiente en temas de rendimiento. En el código presentado se ve reflejado los tiempos de ejecución y procesamiento de hilos _vs_ método secuencial lo cual refleja lo anteriormente escrito.
 
-El diseño aplicado al desarrollo del código fue de gran utilidad, ya que marco un buen inicio para generar dicho código y tener una buena base simplica la en términos de tiempo a la hora de la siguiente iteración. 
+El diseño aplicado al desarrollo del código fue de gran utilidad, ya que marco un buen inicio para generar dicho código y tener una buena base simplica la en términos de tiempo a la hora de la siguiente iteración.
+
+Como último agregado al código y de complemento para el análisis de los resultados, se incluyo un apartado al final del código para calcular el desempeño mediante pruebas de eficiencia, para esto solo se mostraran cuando la cantidad de datos sea significativamente mayor (100000000).
 
 De manera de comentario, es claro que el código puede presentar mejoras claras al ocupar una forma distinta de consolidación de los datos a la hora de trabajar con hilos y un buen manejo de vectores como de arreglos. 

@@ -150,12 +150,8 @@ int main(int argc, char **argv)
 	elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 	auto TotalTimeSerialSum = elapsed.count();
 
-	//float speedUpF = (TotalTimeSerialFilling/TotalTimeParallelFilling);
-  	//float eficienciadF = 1/(1+(TotalTimeParallelFilling/TotalTimeSerialFilling));
-
-	//float speedUp = (TotalTimeSerialSum/TotalTimeParallelSum);
-  	//float eficiencia = 1/(1+(TotalTimeParallelSum/TotalTimeSerialSum));
-
+	
+	
 	// -- Resultados -- //
 	if(verbosidad){
 	std::cout << "======Resultados======" << std::endl;
@@ -168,11 +164,24 @@ int main(int argc, char **argv)
 	std::cout << "====Suma valores====" << std::endl;
 	std::cout << "Tiempo threads		: " <<  TotalTimeParallelSum << "[ms]" << std::endl;
 	std::cout << "Tiempo secuencial 	: " <<  TotalTimeSerialSum << "[ms]" << std::endl;
-	//std::cout << "====Desempeño====" << std::endl;
-	//std::cout << "SpeedUp Llenado : " << speedUpF << "[ms/ms]" <<std::endl;
-	//std::cout << "Eficiencia Llenado : " << eficienciadF << "[1/ms]" <<std::endl;
-	//std::cout << "SpeedUp Suma : " << speedUp << "[ms/ms]" <<std::endl;
-	//std::cout << "Eficiencia Suma : " << eficiencia << "[1/ms]" <<std::endl;
+	
+	if(totalElementos > 10000000){
+		float speedUpF = (TotalTimeSerialFilling/TotalTimeParallelFilling);
+  		float eficienciadF = 1/(1+(TotalTimeParallelFilling/TotalTimeSerialFilling));
 
+		float speedUp = (TotalTimeSerialSum/TotalTimeParallelSum);
+  		float eficiencia = 1/(1+(TotalTimeParallelSum/TotalTimeSerialSum));
+		std::cout << "====Desempeño====" << std::endl;
+		std::cout << "SpeedUp Llenado : " << speedUpF << "[ms/ms]" <<std::endl;
+		std::cout << "Eficiencia Llenado : " << eficienciadF << "[1/ms]" <<std::endl;
+		std::cout << "SpeedUp Suma : " << speedUp << "[ms/ms]" <<std::endl;
+		std::cout << "Eficiencia Suma : " << eficiencia << "[1/ms]" <<std::endl;
+	}else
+		{
+		float speedUpF=0;
+		float eficienciadF=0;
+		float speedUp=0;
+		float eficiencia=0;
+		}
 	return (EXIT_SUCCESS);
 }
