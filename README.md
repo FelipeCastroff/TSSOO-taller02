@@ -15,7 +15,7 @@ Es destacable mencionar que este documento es una extensión del reporte técnic
 
 Es importante mencionar que para la ejecución del código se debe ejecutar con los parámetros necesarios para su correcta implementación. La manera de ejecutar el código es la siguiente:
 
-> ./ sumArray -N **_nro_** -t  **_nro_** 0-l  **_nro_** -L  **_nro_** [-h]
+> ./ sumArray -N **_nro_** -t  **_nro_** -l  **_nro_** -L  **_nro_** [-h]
 >
 >Los parámetros son los siguientes:
 >
