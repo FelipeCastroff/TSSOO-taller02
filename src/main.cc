@@ -168,7 +168,7 @@ int main(int argc, char **argv)
 	std::cout << "====Suma valores====" << std::endl;
 	std::cout << "Tiempo threads		: " <<  TotalTimeParallelSum << "[ms]" << std::endl;
 	std::cout << "Tiempo secuencial 	: " <<  TotalTimeSerialSum << "[ms]" << std::endl;
-	std::cout << "====Desempeño====" << std::endl;
+	//std::cout << "====Desempeño====" << std::endl;
 	//std::cout << "SpeedUp Llenado : " << speedUpF << "[ms/ms]" <<std::endl;
 	//std::cout << "Eficiencia Llenado : " << eficienciadF << "[1/ms]" <<std::endl;
 	//std::cout << "SpeedUp Suma : " << speedUp << "[ms/ms]" <<std::endl;
